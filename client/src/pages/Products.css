@@ -1,0 +1,276 @@
+.products-hero {
+  padding: 40px 0 80px;
+}
+
+.products-hero-card {
+  position: relative;
+  min-height: 480px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.hero-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--olive);
+  clip-path: polygon(0 0, 45% 0, 55% 100%, 0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 60px;
+  z-index: 2;
+}
+
+.hero-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.02em;
+}
+
+.products-grid {
+  padding: 0 0 80px;
+}
+
+.grid-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-inner .product-card-image {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-inner .product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.products-support {
+  padding: 0 0 100px;
+}
+
+.support-title {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.support-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.support-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.support-item .support-icon-box {
+  width: 140px;
+  height: 140px;
+  background: var(--olive);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-item .support-icon-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+.support-item span {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brown);
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-left {
+    padding: 60px 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .products-hero-card {
+    min-height: 400px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-left {
+    padding: 48px 48px;
+    clip-path: polygon(0 0, 48% 0, 58% 100%, 0 100%);
+  }
+
+  .grid-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .grid-inner .product-card-image {
+    height: 280px;
+  }
+
+  .support-icons {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-hero {
+    padding: 20px 0 50px;
+  }
+
+  .products-hero-card {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    border-radius: var(--radius-lg);
+    position: static;
+  }
+
+  .hero-left {
+    position: relative;
+    width: auto;
+    height: auto;
+    clip-path: none;
+    padding: 48px 32px;
+    min-height: 280px;
+    z-index: auto;
+  }
+
+  .hero-right {
+    position: relative;
+    width: auto;
+    height: auto;
+    min-height: 280px;
+    z-index: auto;
+  }
+
+  .hero-right img {
+    border-radius: 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .products-grid {
+    padding: 0 0 50px;
+  }
+
+  .grid-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .grid-inner .product-card-image {
+    height: 240px;
+  }
+
+  .support-title {
+    font-size: 1.75rem;
+    margin-bottom: 36px;
+  }
+
+  .support-icons {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .support-item .support-icon-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .support-item .support-icon-box img {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .grid-inner .product-card-image {
+    height: 300px;
+  }
+
+  .hero-left {
+    padding: 40px 24px;
+    min-height: 220px;
+    clip-path: none;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-right {
+    min-height: 220px;
+  }
+}

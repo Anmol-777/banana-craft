@@ -1,0 +1,352 @@
+/* Our Story — replication of reference, desktop-first */
+.our-story-page {
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+/* Intro */
+.our-journey-intro {
+  padding: 48px 0 14px;
+  background: var(--cream);
+}
+
+.our-journey-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #6B4226;
+  line-height: 1.15;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.015em;
+}
+
+.our-journey-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #8A7D6B;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+/* Story sections */
+.story-section {
+  padding: 42px 0;
+  background: var(--cream);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.story-text {
+  max-width: 540px;
+}
+
+.story-heading {
+  font-family: var(--font-serif);
+  font-size: 1.42rem;
+  font-weight: 600;
+  color: #7A4630;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.story-body {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: #5E5346;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
+/* Image base — never crop, blend into cream */
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  max-width: 100%;
+}
+
+/* Individual image sizing to match reference proportions */
+.img-tree img {
+  max-width: 360px;
+  max-height: 520px;
+}
+
+.img-fire img {
+  max-width: 500px;
+}
+
+.img-speak img {
+  max-width: 380px;
+}
+
+.img-tie img {
+  max-width: 440px;
+}
+
+.img-wheel img {
+  max-width: 340px;
+  max-height: 560px;
+}
+
+.img-oldwoman img {
+  max-width: 420px;
+}
+
+/* Impact / Stats — complete: 50Tons+ left, 10% + 350+ right */
+.impact-stats {
+  padding: 36px 0 72px;
+  background: var(--cream);
+}
+
+.impact-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.impact-left {
+  flex: 1.35;
+  min-width: 0;
+}
+
+.impact-50-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-width: 540px;
+}
+
+.impact-50-caption {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #5E5346;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.impact-right {
+  flex: 0.85;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+.impact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.impact-number {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 800;
+  color: #6B4226;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  min-width: 110px;
+}
+
+.impact-label {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #5E5346;
+  line-height: 1.35;
+}
+
+/* ============ Tablet ============ */
+@media (max-width: 1024px) {
+  .our-journey-title {
+    font-size: 2.05rem;
+  }
+
+  .story-grid {
+    gap: 48px;
+  }
+
+  .story-heading {
+    font-size: 1.28rem;
+  }
+
+  .story-body {
+    font-size: 0.88rem;
+  }
+
+  .img-tree img {
+    max-width: 320px;
+  }
+
+  .img-fire img {
+    max-width: 420px;
+  }
+
+  .img-wheel img {
+    max-width: 300px;
+  }
+
+  .impact-stats-inner {
+    gap: 40px;
+  }
+
+  .impact-number {
+    font-size: 2.6rem;
+    min-width: 95px;
+  }
+
+  .impact-50-img {
+    max-width: 440px;
+  }
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 768px) {
+  .our-journey-intro {
+    padding: 28px 0 8px;
+  }
+
+  .our-journey-title {
+    font-size: 1.75rem;
+  }
+
+  .our-journey-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .story-section {
+    padding: 28px 0;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .story-text {
+    max-width: 100%;
+  }
+
+  .story-heading {
+    font-size: 1.22rem;
+    margin-bottom: 10px;
+  }
+
+  .story-body {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
+  /* Images scale proportionally, centered, never cropped */
+  .story-image img {
+    margin: 0 auto;
+  }
+
+  .img-tree img {
+    max-width: 300px;
+    max-height: 420px;
+  }
+
+  .img-fire img {
+    max-width: 360px;
+  }
+
+  .img-speak img {
+    max-width: 300px;
+  }
+
+  .img-tie img {
+    max-width: 340px;
+  }
+
+  .img-wheel img {
+    max-width: 280px;
+    max-height: 440px;
+  }
+
+  .img-oldwoman img {
+    max-width: 340px;
+  }
+
+  .impact-stats {
+    padding: 24px 0 48px;
+  }
+
+  .impact-stats-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .impact-left {
+    width: 100%;
+  }
+
+  .impact-50-img {
+    max-width: 100%;
+  }
+
+  .impact-50-caption {
+    font-size: 0.82rem;
+  }
+
+  .impact-right {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .impact-number {
+    font-size: 2.4rem;
+    min-width: 90px;
+  }
+
+  .impact-label {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-journey-title {
+    font-size: 1.55rem;
+  }
+
+  .story-heading {
+    font-size: 1.12rem;
+  }
+
+  .story-body {
+    font-size: 0.84rem;
+  }
+
+  .story-grid {
+    gap: 22px;
+  }
+
+  .img-tree img {
+    max-width: 260px;
+  }
+
+  .img-fire img {
+    max-width: 300px;
+  }
+}

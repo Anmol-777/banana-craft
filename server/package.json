@@ -1,0 +1,33 @@
+{
+  "name": "om-banana-crafts-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend CMS API for the Om Banana Crafts client",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "seed": "node src/seed/index.js",
+    "check": "node --check-all-runs",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.20.1",
+    "multer": "^2.0.2",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}
