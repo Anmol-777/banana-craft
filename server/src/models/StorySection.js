@@ -15,6 +15,4 @@ const storySectionSchema = new mongoose.Schema(
   { timestamps: true, toJSON: toJSONOptions },
 );
 
-storySectionSchema.index({ order: 1 });
-
 export const StorySection = mongoose.model('StorySection', storySectionSchema);

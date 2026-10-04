@@ -14,6 +14,4 @@ const galleryItemSchema = new mongoose.Schema(
   { timestamps: true, toJSON: toJSONOptions },
 );
 
-galleryItemSchema.index({ order: 1 });
-
 export const GalleryItem = mongoose.model('GalleryItem', galleryItemSchema);
